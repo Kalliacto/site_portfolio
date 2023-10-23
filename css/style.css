@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root {
+    --main-color: #262626;
+    --second-color: #f0fff0;
+    --main-bg-color: #ffd657;
+    --second-bg-color: #0e1d28;
+    --third-bg-color: #ffffff;
+    --trigger-color: #e5ab39;
+    /* --url-features-one: url('../img/tree.svg');
+    --url-features-two: url('../img/christmas-decorations.svg');
+    --url-features-three: url('../img/flowers.svg');
+    --url-features-four: url('../img/delivery-truck.svg'); */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: 16px;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    color: var(--main-color);
+    background: var(--third-bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+}
+/* Мобильные устройства */
+@media (max-width: 720px) {
+}
+@media (max-width: 380px) {
+}
