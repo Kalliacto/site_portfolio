@@ -1,0 +1,30 @@
+.dark-theme .header {
+    background-color: var(--second-bg-color);
+    color: var(--second-color);
+    border-bottom: 2px solid var(--borderPrimary);
+}
+
+.dark-theme .main {
+    background-color: var(--second-bg-color);
+    color: var(--second-color);
+}
+.dark-theme .footer {
+    background-color: var(--second-bg-color);
+    color: var(--second-color);
+    border-top: 2px solid var(--borderPrimary);
+}
+
+.dark-theme .header__logo {
+    fill: var(--second-color);
+}
+
+.dark-theme .toggle-btn--on.toggle-btn::before {
+    left: calc(100% - 16px);
+    border: 1px solid var(--borderPrimary);
+    background-color: var(--second-bg-color);
+}
+
+.dark-theme .sun-icon,
+.dark-theme .moon-icon {
+    fill: var(--second-color);
+}

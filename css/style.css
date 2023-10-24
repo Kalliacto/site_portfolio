@@ -3,13 +3,17 @@
     --main-color: #262626;
     --second-color: #f0fff0;
     --main-bg-color: #ffd657;
-    --second-bg-color: #0e1d28;
+    --second-bg-color: #232529;
     --third-bg-color: #ffffff;
-    --trigger-color: #e5ab39;
-    /* --url-features-one: url('../img/tree.svg');
-    --url-features-two: url('../img/christmas-decorations.svg');
-    --url-features-three: url('../img/flowers.svg');
-    --url-features-four: url('../img/delivery-truck.svg'); */
+    --main-hover-color: #e5ab39;
+    /* --url-features-one: url('../img/');
+    --url-features-two: url('../img/');
+    --url-features-three: url('../img/');
+    --url-features-four: url('../img/'); */
+    --borderPrimary: #35383f;
+    --attention-color: #d55759;
+    --dark-theme-hover: #696e79;
+    --border-radius: 8px;
 }
 * {
     margin: 0;
@@ -63,6 +67,14 @@ img {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+/* .btn {
+    padding: 5px 10px;
+    outline: none;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--main-hover-color);
+    background-color: inherit;
+} */
 
 /* Планшеты */
 @media (max-width: 1024px) {
