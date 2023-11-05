@@ -1,0 +1,16 @@
+.projects {
+}
+.projects__title {
+}
+.projects__more_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.project__more_text {
+    max-width: 400px;
+    font-size: 20px;
+    line-height: 25px;
+}

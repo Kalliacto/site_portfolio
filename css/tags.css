@@ -1,11 +1,9 @@
 .tags {
     position: absolute;
-    /* top: calc(50% - 30vmin);
-    left: calc(50% - 30vmin); */
-    /* height: 50vmin;
-    width: 50vmin; */
-    top: 0;
-    left: 0;
+    top: calc(50% - 15vmin);
+    left: calc(50% - 20vmin);
+    height: 30vmin;
+    width: 30vmin;
     list-style: none;
     opacity: 0;
     user-select: none;

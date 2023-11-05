@@ -1,12 +1,12 @@
 class FibonacciSphere {
-    #points;
+    points;
 
     get points() {
-        return this.#points;
+        return this.points;
     }
 
     constructor(N) {
-        this.#points = [];
+        this.points = [];
 
         const goldenAngle = Math.PI * (3 - Math.sqrt(5));
 
@@ -17,46 +17,49 @@ class FibonacciSphere {
             const x = Math.cos(a) * radius;
             const z = Math.sin(a) * radius;
 
-            this.#points.push([x, y, z]);
+            this.points.push([x, y, z]);
         }
     }
 }
 
 class TagsCloud {
-    #root;
-    #size;
-    #sphere;
-    #tags;
-    #rotationAxis;
-    #rotationAngle;
-    #rotationSpeed;
-    #frameRequestId;
+    root;
+    size;
+    sphere;
+    tags;
+    rotationAxis;
+    rotationAngle;
+    rotationSpeed;
+    frameRequestId;
 
     constructor(root) {
-        this.#root = root;
-        this.#size = this.#root.offsetWidth;
-        this.#tags = root.querySelectorAll('.tag');
-        this.#sphere = new FibonacciSphere(this.#tags.length);
-        this.#rotationAxis = [1, 0, 0];
-        this.#rotationAngle = 0;
-        this.#rotationSpeed = 0;
+        this.root = root;
+        this.size = this.root.offsetWidth;
+        this.tags = root.querySelectorAll('.tag');
+        this.sphere = new FibonacciSphere(this.tags.length);
+        this.rotationAxis = [1, 0, 0];
+        this.rotationAngle = 0;
+        this.rotationSpeed = 0;
 
-        this.#updatePositions();
-        this.#initEventListeners();
-        this.#root.classList.add('-loaded');
+        this.updatePositions();
+        this.initEventListeners();
+        this.root.classList.add('-loaded');
     }
 
-    #initEventListeners() {
-        window.addEventListener('resize', this.#updatePositions.bind(this));
-        document.addEventListener('mousemove', this.#onMouseMove.bind(this));
+    initEventListeners() {
+        window.addEventListener('resize', this.updatePositions.bind(this));
+        document.addEventListener('mousemove', this.onMouseMove.bind(this));
+        window.addEventListener('resize', () => {
+            this.size = this.root.offsetWidth;
+        });
     }
 
-    #updatePositions() {
-        const sin = Math.sin(this.#rotationAngle);
-        const cos = Math.cos(this.#rotationAngle);
-        const ux = this.#rotationAxis[0];
-        const uy = this.#rotationAxis[1];
-        const uz = this.#rotationAxis[2];
+    updatePositions() {
+        const sin = Math.sin(this.rotationAngle);
+        const cos = Math.cos(this.rotationAngle);
+        const ux = this.rotationAxis[0];
+        const uy = this.rotationAxis[1];
+        const uz = this.rotationAxis[2];
 
         const rotationMatrix = [
             [
@@ -76,12 +79,12 @@ class TagsCloud {
             ],
         ];
 
-        const N = this.#tags.length;
+        const N = this.tags.length;
 
         for (let i = 0; i < N; i++) {
-            const x = this.#sphere.points[i][0];
-            const y = this.#sphere.points[i][1];
-            const z = this.#sphere.points[i][2];
+            const x = this.sphere.points[i][0];
+            const y = this.sphere.points[i][1];
+            const z = this.sphere.points[i][2];
 
             const transformedX =
                 rotationMatrix[0][0] * x + rotationMatrix[0][1] * y + rotationMatrix[0][2] * z;
@@ -90,44 +93,43 @@ class TagsCloud {
             const transformedZ =
                 rotationMatrix[2][0] * x + rotationMatrix[2][1] * y + rotationMatrix[2][2] * z;
 
-            const translateX = (this.#size * transformedX) / 2;
-            const translateY = (this.#size * transformedY) / 2;
+            const translateX = (this.size * transformedX) / 2;
+            const translateY = (this.size * transformedY) / 2;
             const scale = (transformedZ + 2) / 3;
             const transform = `translateX(${translateX}px) translateY(${translateY}px) scale(${scale})`;
             const opacity = (transformedZ + 1.5) / 2.5;
 
-            this.#tags[i].style.transform = transform;
-            this.#tags[i].style.opacity = opacity;
+            this.tags[i].style.transform = transform;
+            this.tags[i].style.opacity = opacity;
         }
     }
 
-    #onMouseMove(e) {
-        const rootRect = this.#root.getBoundingClientRect();
-        const deltaX = e.clientX - (rootRect.left + this.#root.offsetWidth / 2);
-        const deltaY = e.clientY - (rootRect.top + this.#root.offsetHeight / 2);
+    onMouseMove(e) {
+        const rootRect = this.root.getBoundingClientRect();
+        const deltaX = e.clientX - (rootRect.left + this.root.offsetWidth / 2);
+        const deltaY = e.clientY - (rootRect.top + this.root.offsetHeight / 2);
         const a = Math.atan2(deltaX, deltaY) - Math.PI / 2;
         const axis = [Math.sin(a), Math.cos(a), 0];
         const delta = Math.sqrt(deltaX ** 2 + deltaY ** 2);
         const speed = delta / Math.max(window.innerHeight, window.innerWidth) / 20;
 
-        this.#rotationAxis = axis;
-        this.#rotationSpeed = speed;
+        this.rotationAxis = axis;
+        this.rotationSpeed = speed;
     }
 
-    #update() {
-        this.#rotationAngle += this.#rotationSpeed;
-
-        this.#updatePositions();
+    update() {
+        this.rotationAngle += this.rotationSpeed;
+        this.updatePositions();
     }
 
     start() {
-        this.#update();
+        this.update();
 
-        this.#frameRequestId = requestAnimationFrame(this.start.bind(this));
+        this.frameRequestId = requestAnimationFrame(this.start.bind(this));
     }
 
     stop() {
-        cancelAnimationFrame(this.#frameRequestId);
+        cancelAnimationFrame(this.frameRequestId);
     }
 }
 

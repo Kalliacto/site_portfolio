@@ -2,12 +2,14 @@
     background-color: var(--main-bg-color);
     border-bottom: 2px solid var(--main-hover-color);
 }
+
 .header__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 25px;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .header__logo {
     max-width: 150px;
@@ -25,6 +27,7 @@
     gap: 10px;
     flex-wrap: wrap;
     justify-content: flex-end;
+    align-items: center;
 }
 .navigation {
     align-self: center;
@@ -51,6 +54,7 @@
     border: 1px solid var(--main-color);
     border-radius: 50%;
     background-color: var(--main-bg-color);
+    transition: all 0.3s linear;
 }
 .sun-icon,
 .moon-icon {
@@ -60,6 +64,12 @@
 @media (max-width: 720px) {
     .header__logo {
         transform: scale(0.65);
+    }
+}
+
+@media (max-width: 520px) {
+    .header__navigation {
+        flex-direction: column-reverse;
     }
 }
 
