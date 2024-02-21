@@ -1,3 +1,10 @@
+// ------------------------Loading при загррузке-----------------
+const loaderContainer = document.querySelector('.loader-container');
+
+window.addEventListener('load', () => {
+    loaderContainer.style.display = 'none';
+});
+// ---------------------------------------------------------------
 const themeButton = document.querySelector('.toggle-btn');
 const page = document.querySelector('.page');
 
