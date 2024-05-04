@@ -5,14 +5,19 @@ import HomePage from './pages/homePage/inadex';
 import Projects from './pages/projects/inadex';
 import './styles/main.css';
 import './App.css';
+import { Route, Routes } from 'react-router';
+import ProjectPage from './pages/projectPage';
 
 function App() {
     return (
         <div className='App'>
             <Navbar />
-            {/* <HomePage /> */}
-            {/* <Projects /> */}
-            <Contacts />
+            <Routes>
+                <Route path='/' element={<HomePage />} />
+                <Route path='/allProjects' element={<Projects />} />
+                <Route path='/project/:id' element={<ProjectPage />} />
+                <Route path='/contacts' element={<Contacts />} />
+            </Routes>
             <Footer />
         </div>
     );
