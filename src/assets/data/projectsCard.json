@@ -1,0 +1,38 @@
+[
+    {
+        "id": "project_1",
+        "title": "Video service of popular videos You Tube",
+        "miniImg": "project_1",
+        "mainImg": ""
+    },
+    {
+        "id": "project_2",
+        "title": "Online Lingerie Store",
+        "miniImg": "project_2",
+        "mainImg": ""
+    },
+    {
+        "id": "project_3",
+        "title": "Online Bird Goods Store",
+        "miniImg": "project_3",
+        "mainImg": ""
+    },
+    {
+        "id": "project_4",
+        "title": "The website page dedicated to the series 'Avatar: The Legend of Aang'",
+        "miniImg": "project_4",
+        "mainImg": ""
+    },
+    {
+        "id": "project_5",
+        "title": "Landing NTF Marketplace",
+        "miniImg": "project_5",
+        "mainImg": ""
+    },
+    {
+        "id": "project_6",
+        "title": "Weather website",
+        "miniImg": "project_6",
+        "mainImg": ""
+    }
+]
