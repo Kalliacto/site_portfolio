@@ -12,7 +12,7 @@ const Footer = (props) => {
                 <div className='footer__wrapper'>
                     <ul className='social'>
                         <li className='social__item'>
-                            <a href='#!'>
+                            <a href='https://vk.com/id193743900' target='_blank' rel='noreferrer'>
                                 <img src={vk} alt='Link' />
                             </a>
                         </li>
@@ -27,17 +27,12 @@ const Footer = (props) => {
                             </a>
                         </li>
                         <li className='social__item'>
-                            <a href='#!'>
+                            <a href='https://github.com/Kalliacto' target='_blank' rel='noreferrer'>
                                 <img src={gitHub} alt='Link' />
                             </a>
                         </li>
                     </ul>
-                    <div className='copyright'>
-                        Developer:
-                        <a href='https://github.com/Kalliacto' target='_blank'>
-                            &nbsp;Kalliacto with Love&#129505;
-                        </a>
-                    </div>
+                    <div className='copyright'>Developer:&nbsp;Kalliacto with Love&#129505;</div>
                 </div>
             </div>
         </footer>
