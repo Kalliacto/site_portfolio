@@ -4,6 +4,8 @@ import moon from '../../assets/images/icons/moon.svg';
 import logo from '../../assets/images/Boronina.svg';
 import './style.css';
 import { NavLink } from 'react-router-dom';
+import NavBarLink from '../UI/NavBarLink';
+import infoLink from '../../assets/data/infoLink.json';
 
 const Navbar = (props) => {
     return (
@@ -19,36 +21,11 @@ const Navbar = (props) => {
                         <img src={moon} alt='Dark mode' className='dark-mode-btn__icon' />
                     </button>
                     <ul className='nav-list'>
-                        <li className='nav-list__item'>
-                            <NavLink
-                                to={'/'}
-                                className={({ isActive }) =>
-                                    'nav-list__link' + (isActive ? ' nav-list__link--active' : '')
-                                }
-                            >
-                                Home
-                            </NavLink>
-                        </li>
-                        <li className='nav-list__item'>
-                            <NavLink
-                                to={'/allProjects'}
-                                className={({ isActive }) =>
-                                    'nav-list__link' + (isActive ? ' nav-list__link--active' : '')
-                                }
-                            >
-                                Projects
-                            </NavLink>
-                        </li>
-                        <li className='nav-list__item'>
-                            <NavLink
-                                to={'/contacts'}
-                                className={({ isActive }) =>
-                                    'nav-list__link' + (isActive ? ' nav-list__link--active' : '')
-                                }
-                            >
-                                Contacts
-                            </NavLink>
-                        </li>
+                        {infoLink.map((link) => (
+                            <li key={link.title} className='nav-list__item'>
+                                <NavBarLink path={link.path} title={link.title} />
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

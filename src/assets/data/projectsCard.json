@@ -2,37 +2,43 @@
     {
         "id": "project_1",
         "title": "Video service of popular videos You Tube",
-        "miniImg": "project_1",
-        "mainImg": ""
+        "miniImg": "project_mini1",
+        "mainImg": "project_1",
+        "gitHabLink": "https://github.com/Kalliacto/Mini_video_service"
     },
     {
         "id": "project_2",
         "title": "Online Lingerie Store",
-        "miniImg": "project_2",
-        "mainImg": ""
+        "miniImg": "project_mini2",
+        "mainImg": "project_2",
+        "gitHabLink": "https://github.com/Kalliacto/onlineShop_Inspired"
     },
     {
         "id": "project_3",
         "title": "Online Bird Goods Store",
-        "miniImg": "project_3",
-        "mainImg": ""
+        "miniImg": "project_mini3",
+        "mainImg": "project_3",
+        "gitHabLink": "https://github.com/Kalliacto/Black-Parrot"
     },
     {
         "id": "project_4",
         "title": "The website page dedicated to the series 'Avatar: The Legend of Aang'",
-        "miniImg": "project_4",
-        "mainImg": ""
+        "miniImg": "project_mini4",
+        "mainImg": "project_4",
+        "gitHabLink": "https://github.com/Kalliacto/Avatar_The_Legend_of_Aang"
     },
     {
         "id": "project_5",
         "title": "Landing NTF Marketplace",
-        "miniImg": "project_5",
-        "mainImg": ""
+        "miniImg": "project_mini5",
+        "mainImg": "project_5",
+        "gitHabLink": "https://github.com/Kalliacto/NFTMarketplace"
     },
     {
         "id": "project_6",
         "title": "Weather website",
-        "miniImg": "project_6",
-        "mainImg": ""
+        "miniImg": "project_mini6",
+        "mainImg": "project_6",
+        "gitHabLink": "https://github.com/Kalliacto/NFTMarketplace"
     }
 ]
