@@ -7,7 +7,10 @@
 
 .project__img {
     overflow: hidden;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 20px 15px;
+    max-width: 370px;
+    max-height: 280px;
 }
 
 .project__title {
