@@ -1,13 +1,13 @@
 .project__card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    text-align: center;
 }
 
 .project__img {
     overflow: hidden;
     object-fit: cover;
-    width: 100%;
 }
 
 .project__title {

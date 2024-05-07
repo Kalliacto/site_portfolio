@@ -4,41 +4,47 @@
         "title": "Video service of popular videos You Tube",
         "miniImg": "project_mini1",
         "mainImg": "project_1",
-        "gitHabLink": "https://github.com/Kalliacto/Mini_video_service"
+        "gitHabLink": "https://github.com/Kalliacto/Mini_video_service",
+        "skills": "Pinia, Vue 3, Vue-router 4, Для запросов использована консоль google cloud"
     },
     {
         "id": "project_2",
         "title": "Online Lingerie Store",
         "miniImg": "project_mini2",
         "mainImg": "project_2",
-        "gitHabLink": "https://github.com/Kalliacto/onlineShop_Inspired"
+        "gitHabLink": "https://github.com/Kalliacto/onlineShop_Inspired",
+        "skills": "React, ReactDOM, Formik, React Router, Reduxjs/toolkit, Classnames, Sass, react-loader-spinner"
     },
     {
         "id": "project_3",
         "title": "Online Bird Goods Store",
         "miniImg": "project_mini3",
         "mainImg": "project_3",
-        "gitHabLink": "https://github.com/Kalliacto/Black-Parrot"
+        "gitHabLink": "https://github.com/Kalliacto/Black-Parrot",
+        "skills": "React, ReactDOM, React bootstrap icons, React hook form, React Router, Reduxjs/toolkit, Classnames, Sass, React-slick, React-Toastify "
     },
     {
         "id": "project_4",
         "title": "The website page dedicated to the series 'Avatar: The Legend of Aang'",
         "miniImg": "project_mini4",
         "mainImg": "project_4",
-        "gitHabLink": "https://github.com/Kalliacto/Avatar_The_Legend_of_Aang"
+        "gitHabLink": "https://github.com/Kalliacto/Avatar_The_Legend_of_Aang",
+        "skills": "React + Vite"
     },
     {
         "id": "project_5",
         "title": "Landing NTF Marketplace",
         "miniImg": "project_mini5",
         "mainImg": "project_5",
-        "gitHabLink": "https://github.com/Kalliacto/NFTMarketplace"
+        "gitHabLink": "https://github.com/Kalliacto/NFTMarketplace",
+        "skills": "React, HTML, CSS (flex, grid), React Router "
     },
     {
         "id": "project_6",
         "title": "Weather website",
         "miniImg": "project_mini6",
         "mainImg": "project_6",
-        "gitHabLink": "https://github.com/Kalliacto/NFTMarketplace"
+        "gitHabLink": "https://github.com/Kalliacto/WeatherForecast",
+        "skills": "React, HTML, CSS (flex, grid), React Router, API погоды weatherapi"
     }
 ]
