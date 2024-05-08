@@ -41,8 +41,4 @@
     .nav-row {
         justify-content: space-between;
     }
-
-    .dark-mode-btn {
-        order: 0;
-    }
 }

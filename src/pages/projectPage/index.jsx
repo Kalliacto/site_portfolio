@@ -20,8 +20,7 @@ const ProjectPage = ({}) => {
                     <h1 class='title-1'>{project.title}</h1>
                     <img src={projectsImg[project.mainImg]} alt={project.title} class='project-details__cover' />
                     <div class='project-details__desc'>
-                        <p>Skills: React, перечисляем скилы</p>
-                        {/* TODO: перечислить скилы в json */}
+                        <p>Skills: {project.skills}</p>
                     </div>
                     <a href={project.gitHabLink} class='btn-outline' target='_blank' rel='noreferrer'>
                         <img src={gitHub} alt='gitHubImg' />
