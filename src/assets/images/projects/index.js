@@ -10,6 +10,10 @@ import project_mini3 from './mini3.jpg';
 import project_mini4 from './mini4.jpg';
 import project_mini5 from './mini5.jpg';
 import project_mini6 from './mini6.jpg';
+import photo1 from './photo1.png';
+import photo2 from './photo2.png';
+import photo3 from './photo3.png';
+import photo4 from './photo4.png';
 
 const projectsMiniImg = {
     project_1,
@@ -24,6 +28,10 @@ const projectsMiniImg = {
     project_mini4,
     project_mini5,
     project_mini6,
+    photo1,
+    photo2,
+    photo3,
+    photo4,
 };
 
 export default projectsMiniImg;

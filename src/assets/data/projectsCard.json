@@ -20,6 +20,7 @@
         "title": "Online Bird Goods Store",
         "miniImg": "project_mini3",
         "mainImg": "project_3",
+        "photos": ["project_3", "photo1", "photo2", "photo3", "photo4"],
         "gitHabLink": "https://github.com/Kalliacto/Black-Parrot",
         "skills": "React, ReactDOM, React bootstrap icons, React hook form, React Router, Reduxjs/toolkit, Classnames, Sass, React-slick, React-Toastify "
     },

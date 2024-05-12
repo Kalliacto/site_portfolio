@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import projectsCards from '../../assets/data/projectsCard.json';
 import projectsImg from '../../assets/images/projects';
 import gitHub from '../../assets/images/icons/gitHub-black.svg';
+import Slider from '../../components/slider';
 
 const ProjectPage = ({}) => {
     const { id } = useParams();
@@ -27,6 +28,7 @@ const ProjectPage = ({}) => {
                         GitHub repo
                     </a>
                 </div>
+                {!!project.photos && <Slider photos={project.photos} />}
             </div>
         </main>
     );
