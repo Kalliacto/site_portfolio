@@ -19,7 +19,16 @@ const ProjectPage = ({}) => {
             <div class='container'>
                 <div class='project-details'>
                     <h1 class='title-1'>{project.title}</h1>
-                    <img src={projectsImg[project.mainImg]} alt={project.title} class='project-details__cover' />
+                    {!!project.photos && project.photos.length ? (
+                        <Slider photos={project.photos} />
+                    ) : (
+                        <img
+                            src={projectsImg[project.mainImg]}
+                            alt={project.title}
+                            className='project-details__cover'
+                        />
+                    )}
+
                     <div class='project-details__desc'>
                         <p>Skills: {project.skills}</p>
                     </div>
@@ -28,7 +37,6 @@ const ProjectPage = ({}) => {
                         GitHub repo
                     </a>
                 </div>
-                {!!project.photos && <Slider photos={project.photos} />}
             </div>
         </main>
     );

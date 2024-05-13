@@ -11,6 +11,7 @@ const HomePage = (props) => {
                     <ul className='content-list'>
                         <li className='content-list__item'>
                             <h2 className='title-2'>Frontend</h2>
+                            {/* TODO: сделать анимацию смены цвета пунктов списка */}
                             <p>
                                 JavaScript, ReactJS, React Router, Redux, HTML, CSS, SASS, BootStrap, MaterialUI,
                                 TailwindCSS, NPM, Yarn, GitHub Pages, Figma, VueJs,

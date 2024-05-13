@@ -1,22 +1,43 @@
+.slider__container {
+    position: relative;
+    overflow: hidden;
+    min-height: 372px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
 .slider__list {
-    display: flex;
-    list-style: none;
     padding: 0;
-    margin: 0 -16px;
+    justify-content: center;
+    display: grid;
+    list-style: none;
+    gap: 50px;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    height: 680px;
 }
 .slider__item {
-    padding: 0 16px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    max-width: 25%;
-}
-.slider__item_active {
-    max-width: 50%;
+    width: 160px;
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    height: 100%;
 }
 
+.slider__item_active {
+    width: 100%;
+    max-height: 100%;
+}
+
+.slider__img {
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+}
+.slider__item_active .slider__img {
+    object-fit: scale-down;
+}
 .slider__arrow {
     position: absolute;
-    bottom: 29%;
+    bottom: 1%;
     width: 64px;
     height: 8px;
     background-color: transparent;
@@ -39,55 +60,28 @@
     background-image: url("data:image/svg+xml,%3Csvg width='65' height='8' viewBox='0 0 65 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M64.3536 3.64645C64.5488 3.84171 64.5488 4.15829 64.3536 4.35355L61.1716 7.53553C60.9763 7.7308 60.6597 7.7308 60.4645 7.53553C60.2692 7.34027 60.2692 7.02369 60.4645 6.82843L63.2929 4L60.4645 1.17157C60.2692 0.976311 60.2692 0.659728 60.4645 0.464466C60.6597 0.269204 60.9763 0.269204 61.1716 0.464466L64.3536 3.64645ZM0 3.5L64 3.5V4.5L0 4.5L0 3.5Z' fill='%23F6F3E3'/%3E%3C/svg%3E%0A");
     right: 8%;
 }
+/* TODO: Переделать стрелочки, чтобы менялись цвета при смене темы */
 
-/* @media (max-width: 1024px) {
-    .slider__item {
-        max-width: 30%;
-    }
-    .slider__item_active {
-        max-width: 40%;
-    }
-    .slider__arrow {
-        bottom: 12%;
+@media (max-width: 1024px) {
+    .slider__list {
+        height: 480px;
+        gap: 30px;
     }
 }
 
 @media (max-width: 768px) {
-       .slider__item {
-        max-width: 25%;
+    .slider__list {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .left_slide {
+        display: none;
+    }
+    .right_slide {
+        display: none;
     }
     .slider__item_active {
-        max-width: 50%;
-    }
-    .slider__arrow {
-        bottom: 29%;
-        width: 40px;
-    }
-    .slider__arrow_left {
-        background-position: left;
-    }
-    .slider__arrow_right {
-        background-position: right;
+        max-height: 95%;
     }
 }
-
-@media (max-width: 560px) {
-    .slider {
-        padding-bottom: 20px;
-    }
-    .slider__item {
-        max-width: 100%;
-    }
-    .slider__item_active {
-        max-width: 100%;
-    }
-    .slider__arrow {
-        bottom: 0;
-    }
-    .slider__arrow_left {
-        left: 0;
-    }
-    .slider__arrow_right {
-        right: 0;
-    }
-} */
+/* TODO: Адаптив слайдера */

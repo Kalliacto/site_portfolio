@@ -3,10 +3,10 @@ import './style.css';
 import projectsImg from '../../assets/images/projects';
 
 const Slider = ({ photos }) => {
-    const [indexActivePhoto, setIndexActivePhoto] = useState(0);
+    const [indexActivePhoto, setIndexActivePhoto] = useState(1);
     let activePhoto = photos[indexActivePhoto];
-    let prevPhoto = photos[activePhoto - 1];
-    let nextPhoto = photos[activePhoto + 1];
+    let prevPhoto = photos[indexActivePhoto - 1];
+    let nextPhoto = photos[indexActivePhoto + 1];
 
     const handlerPrevPhoto = () => {
         if (indexActivePhoto !== 0) {
@@ -23,20 +23,40 @@ const Slider = ({ photos }) => {
     return (
         <div className='slider__container'>
             <ul className='slider__list'>
-                <li className='slider__item'>
+                {!!prevPhoto ? (
+                    <li className='slider__item left_slide'>
+                        <img className='slider__img' src={projectsImg[prevPhoto]} alt='стрижка модельная' />
+                    </li>
+                ) : (
+                    <li className='slider__item'></li>
+                )}
+                <li className='slider__item slider__item_active'>
                     <img className='slider__img' src={projectsImg[activePhoto]} alt='стрижка модельная' />
                 </li>
+                {!!nextPhoto && (
+                    <li className='slider__item right_slide'>
+                        <img className='slider__img' src={projectsImg[nextPhoto]} alt='стрижка модельная' />
+                    </li>
+                )}
             </ul>
-            <button
-                className='slider__arrow slider__arrow_left'
-                aria-label='Предыдущий слайд'
-                onClick={handlerPrevPhoto}
-            ></button>
-            <button
-                className='slider__arrow slider__arrow_right'
-                aria-label='Следующий слайд'
-                onClick={handlerNextPhoto}
-            ></button>
+            {indexActivePhoto !== 0 ? (
+                <button
+                    className='slider__arrow slider__arrow_left'
+                    aria-label='Предыдущий слайд'
+                    onClick={handlerPrevPhoto}
+                ></button>
+            ) : (
+                ''
+            )}
+            {indexActivePhoto !== photos.length - 1 ? (
+                <button
+                    className='slider__arrow slider__arrow_right'
+                    aria-label='Следующий слайд'
+                    onClick={handlerNextPhoto}
+                ></button>
+            ) : (
+                ''
+            )}
         </div>
     );
 };
