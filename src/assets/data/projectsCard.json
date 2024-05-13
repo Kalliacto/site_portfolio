@@ -1,49 +1,62 @@
 [
     {
-        "id": "project_1",
+        "id": "project1",
         "title": "Video service of popular videos You Tube",
         "miniImg": "project_mini1",
-        "mainImg": "project_1",
+        "mainImg": "project1",
+        "photos": ["project1", "project1_1", "project1_2"],
         "gitHabLink": "https://github.com/Kalliacto/Mini_video_service",
         "skills": "Pinia, Vue 3, Vue-router 4, Для запросов использована консоль google cloud"
     },
     {
-        "id": "project_2",
+        "id": "project2",
         "title": "Online Lingerie Store",
         "miniImg": "project_mini2",
-        "mainImg": "project_2",
+        "mainImg": "project2",
+        "photos": ["project2", "project2_1", "project2_2", "project2_3", "project2_4", "project2_5"],
         "gitHabLink": "https://github.com/Kalliacto/onlineShop_Inspired",
         "skills": "React, ReactDOM, Formik, React Router, Reduxjs/toolkit, Classnames, Sass, react-loader-spinner"
     },
     {
-        "id": "project_3",
+        "id": "project3",
         "title": "Online Bird Goods Store",
         "miniImg": "project_mini3",
-        "mainImg": "project_3",
+        "mainImg": "project3",
+        "photos": [
+            "project3",
+            "project3_1",
+            "project3_2",
+            "project3_3",
+            "project3_4",
+            "project3_5",
+            "project3_6",
+            "project3_7"
+        ],
         "gitHabLink": "https://github.com/Kalliacto/Black-Parrot",
         "skills": "React, ReactDOM, React bootstrap icons, React hook form, React Router, Reduxjs/toolkit, Classnames, Sass, React-slick, React-Toastify "
     },
     {
-        "id": "project_4",
+        "id": "project4",
         "title": "The website page dedicated to the series 'Avatar: The Legend of Aang'",
         "miniImg": "project_mini4",
-        "mainImg": "project_4",
+        "mainImg": "project4",
         "gitHabLink": "https://github.com/Kalliacto/Avatar_The_Legend_of_Aang",
         "skills": "React + Vite"
     },
     {
-        "id": "project_5",
+        "id": "project5",
         "title": "Landing NTF Marketplace",
         "miniImg": "project_mini5",
-        "mainImg": "project_5",
+        "mainImg": "project5",
+        "photos": ["project5", "project5_1", "project5_2", "project5_3", "project5_4", "project5_5"],
         "gitHabLink": "https://github.com/Kalliacto/NFTMarketplace",
         "skills": "React, HTML, CSS (flex, grid), React Router "
     },
     {
-        "id": "project_6",
+        "id": "project6",
         "title": "Weather website",
         "miniImg": "project_mini6",
-        "mainImg": "project_6",
+        "mainImg": "project6",
         "gitHabLink": "https://github.com/Kalliacto/WeatherForecast",
         "skills": "React, HTML, CSS (flex, grid), React Router, API погоды weatherapi"
     }
