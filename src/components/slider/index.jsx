@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import './style.css';
 import projectsImg from '../../assets/images/projects';
+import { ReactComponent as Zoom } from '../../assets/images/icons/zoom.svg?react';
+import Modal from '../modal';
 
 const Slider = ({ photos }) => {
     const [indexActivePhoto, setIndexActivePhoto] = useState(1);
+    const [isModal, setModal] = useState(false);
     let activePhoto = photos[indexActivePhoto];
     let prevPhoto = photos[indexActivePhoto - 1];
     let nextPhoto = photos[indexActivePhoto + 1];
@@ -32,6 +35,9 @@ const Slider = ({ photos }) => {
                 )}
                 <li className='slider__item slider__item_active'>
                     <img className='slider__img' src={projectsImg[activePhoto]} alt='стрижка модельная' />
+                    <div className='main__photo_zoom'>
+                        <Zoom onClick={() => setModal(true)} />
+                    </div>
                 </li>
                 {!!nextPhoto && (
                     <li className='slider__item right_slide'>
@@ -57,6 +63,7 @@ const Slider = ({ photos }) => {
             ) : (
                 ''
             )}
+            <Modal isVisible={isModal} setModal={setModal} content={projectsImg[activePhoto]} />
         </div>
     );
 };

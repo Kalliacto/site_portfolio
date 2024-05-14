@@ -1,0 +1,67 @@
+.modal {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    animation-name: appear;
+    animation-duration: 300ms;
+}
+
+.modal__dialog {
+    width: auto;
+    height: max-content;
+    max-width: 95%;
+    max-height: 95vh;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+    border-radius: 24px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal__close {
+    cursor: pointer;
+    padding: 5px;
+    margin: -5px -5px -5px auto;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    font-size: 24px;
+    color: var(--black);
+}
+.modal__content {
+    border-radius: 24px;
+    width: auto;
+    height: max-content;
+    max-height: 95vh;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-150px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
