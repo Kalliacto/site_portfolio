@@ -29,6 +29,10 @@
     border-radius: 24px;
 }
 
+.modal__dialog-active {
+    overflow-y: scroll;
+}
+
 .modal__close {
     cursor: pointer;
     padding: 5px;
@@ -46,10 +50,18 @@
     max-height: 95vh;
 }
 
-.modal__content:hover {
-    cursor: zoom-out;
+.modal__content-active {
+    border-radius: 24px;
+    width: auto;
 }
 
+.modal__content:hover {
+    cursor: zoom-in;
+}
+
+.modal__content-active:hover {
+    cursor: zoom-out;
+}
 .modal__arrow {
     background-color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
