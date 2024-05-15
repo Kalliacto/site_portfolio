@@ -26,7 +26,7 @@ const HomePage = (props) => {
                             <img src={avatar} alt='avatar' className='content__list_item-img' />
                         </li>
                         <li className='content__list_item'>
-                            <h2 className='title-2'>About me</h2>
+                            <h2 className='title-2'>About my skills</h2>
                             <p id='skills__list' ref={dataCollection}>
                                 <span>JavaScript</span>, <span>React JS</span>,<span> React Router</span>,{' '}
                                 <span>Redux</span>, <span>HTML</span>, <span>CSS</span>, <span>SASS</span>,{' '}

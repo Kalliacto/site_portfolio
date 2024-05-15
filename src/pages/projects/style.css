@@ -1,10 +1,8 @@
 .projects {
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, clamp(300px, 15%, 400px)); */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(300px, 31%, 500px));
     justify-content: center;
     gap: 30px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .project {
@@ -12,5 +10,16 @@
     background-color: var(--project-card-bg);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
-    flex-grow: 1;
+}
+
+@media (max-width: 620px) {
+    .projects {
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, clamp(150px, 100%, 500px));
+    }
+
+    .project {
+        max-width: none;
+        width: 100%;
+    }
 }
