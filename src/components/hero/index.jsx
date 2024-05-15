@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import resume from '../../assets/images/resume.pdf';
 
 const Hero = (props) => {
     return (
@@ -14,7 +15,7 @@ const Hero = (props) => {
                 <div className='hero__text'>
                     <p>with passion for learning and creating.</p>
                 </div>
-                <a href='#!' className='btn'>
+                <a href={resume} download={'resume.pdf'} className='btn' target='_blank' rel='noreferrer'>
                     Download CV
                 </a>
             </div>
