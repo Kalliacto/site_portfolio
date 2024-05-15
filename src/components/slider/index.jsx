@@ -11,6 +11,9 @@ const Slider = ({ photos }) => {
     let prevPhoto = photos[indexActivePhoto - 1];
     let nextPhoto = photos[indexActivePhoto + 1];
 
+    //TODO: Сделать функцию определения какая тема и от этого сделать зависимость цвета лупы?
+    //TODO: Определять на какой я странице и на странице NTF или Inspired сделать всегда лупу противоположного цвета
+
     const handlerPrevPhoto = () => {
         if (indexActivePhoto !== 0) {
             setIndexActivePhoto(indexActivePhoto - 1);
@@ -22,6 +25,8 @@ const Slider = ({ photos }) => {
             setIndexActivePhoto(indexActivePhoto + 1);
         }
     };
+
+    // TODO: Сделать слайдер внутри модалки?
 
     return (
         <div className='slider__container'>

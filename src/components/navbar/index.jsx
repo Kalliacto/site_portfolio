@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../assets/images/Boronina.svg';
 import './style.css';
 import { NavLink } from 'react-router-dom';
 import NavBarLink from '../UI/NavBarLink';
@@ -12,13 +11,12 @@ const Navbar = (props) => {
             <div className='container'>
                 <div className='nav-row'>
                     <NavLink to={'/'} className='logo'>
-                        {/* <img src={logo} alt='Boronina' className='logo__img' /> */}
                         <strong>Boronina</strong> portfolio
                     </NavLink>
                     <BtnDarkLight />
-                    <ul className='nav-list'>
+                    <ul className='nav__list'>
                         {infoLink.map((link) => (
-                            <li key={link.title} className='nav-list__item'>
+                            <li key={link.title} className='nav__list_item'>
                                 <NavBarLink path={link.path} title={link.title} />
                             </li>
                         ))}

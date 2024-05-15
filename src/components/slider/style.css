@@ -76,7 +76,6 @@
 .main__photo_zoom:hover {
     transform: scale(1.5);
 }
-/* TODO: Переделать стрелочки, чтобы менялись цвета при смене темы */
 
 @media (max-width: 1024px) {
     .slider__list {
@@ -100,4 +99,3 @@
         max-height: 95%;
     }
 }
-/* TODO: Адаптив слайдера */

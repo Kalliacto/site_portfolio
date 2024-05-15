@@ -1,4 +1,4 @@
-.content-list {
+.content__list {
     margin: 0 auto;
     max-width: 570px;
     display: flex;
@@ -8,24 +8,24 @@
     text-align: center;
 }
 
-.content-list a {
+.content__list a {
     color: var(--accent);
 }
 
-.content-list__item {
+.content__list_item {
     font-size: 18px;
     line-height: 1.5;
 }
 
-.content-list__item p + p {
+.content__list_item p + p {
     margin-top: 0.5em;
 }
 @media (max-width: 620px) {
-    .content-list {
+    .content__list {
         row-gap: 20px;
     }
 
-    .content-list__item {
+    .content__list_item {
         font-size: 16px;
     }
 }

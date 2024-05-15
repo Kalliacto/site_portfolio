@@ -1,15 +1,15 @@
 import React from 'react';
-import Header from '../../components/header/inedex';
+import Hero from '../../components/hero/index';
 import './style.css';
 
 const HomePage = (props) => {
     return (
         <>
-            <Header />
+            <Hero />
             <main className='section'>
                 <div className='container'>
-                    <ul className='content-list'>
-                        <li className='content-list__item'>
+                    <ul className='content__list'>
+                        <li className='content__list_item'>
                             <h2 className='title-2'>Frontend</h2>
                             {/* TODO: сделать анимацию смены цвета пунктов списка */}
                             <p>

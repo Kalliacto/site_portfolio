@@ -23,4 +23,6 @@ function App() {
     );
 }
 
+// TODO: Сделать кнопку скачать резюме активной
+
 export default App;

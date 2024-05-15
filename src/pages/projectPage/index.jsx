@@ -15,10 +15,10 @@ const ProjectPage = ({}) => {
     }, [id]);
 
     return (
-        <main class='section'>
-            <div class='container'>
-                <div class='project-details'>
-                    <h1 class='title-1'>{project.title}</h1>
+        <main className='section'>
+            <div className='container'>
+                <div className='project-details'>
+                    <h1 className='title-1'>{project.title}</h1>
                     {!!project.photos && project.photos.length ? (
                         <Slider photos={project.photos} />
                     ) : (
@@ -29,10 +29,10 @@ const ProjectPage = ({}) => {
                         />
                     )}
 
-                    <div class='project-details__desc'>
+                    <div className='project-details__desc'>
                         <p>Skills: {project.skills}</p>
                     </div>
-                    <a href={project.gitHabLink} class='btn-outline' target='_blank' rel='noreferrer'>
+                    <a href={project.gitHabLink} className='btn-outline' target='_blank' rel='noreferrer'>
                         <img src={gitHub} alt='gitHubImg' />
                         GitHub repo
                     </a>

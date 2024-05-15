@@ -1,9 +1,10 @@
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, clamp(300px, 15%, 400px));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, clamp(300px, 15%, 400px)); */
     justify-content: center;
-    column-gap: 30px;
-    row-gap: 30px;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .project {
