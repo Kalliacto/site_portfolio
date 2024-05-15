@@ -8,7 +8,7 @@ import { useLocalStorage } from '../../utils/useLocalStorage';
 const BtnDarkLight = (props) => {
     const [darkMode, setDarkMode] = useLocalStorage('darkMode', detectMode());
     const btnLight = 'dark-mode-btn';
-    const btnDark = 'dark-mode-btn dark-mode-btn--active';
+    const btnDark = 'dark-mode-btn dark-mode-btn-active';
 
     const toggleMode = () => {
         setDarkMode((state) => (state === 'light' ? 'dark' : 'light'));
