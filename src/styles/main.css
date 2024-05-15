@@ -130,3 +130,7 @@ body {
     position: relative;
     top: 1px;
 }
+
+.visibility {
+    visibility: hidden;
+}

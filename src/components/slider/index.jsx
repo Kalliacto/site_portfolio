@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
 import projectsImg from '../../assets/images/projects';
-import { ReactComponent as Zoom } from '../../assets/images/icons/zoom.svg?react';
 import Modal from '../modal';
 
 const Slider = ({ photos }) => {
@@ -11,22 +10,19 @@ const Slider = ({ photos }) => {
     let prevPhoto = photos[indexActivePhoto - 1];
     let nextPhoto = photos[indexActivePhoto + 1];
 
-    //TODO: Сделать функцию определения какая тема и от этого сделать зависимость цвета лупы?
-    //TODO: Определять на какой я странице и на странице NTF или Inspired сделать всегда лупу противоположного цвета
-
-    const handlerPrevPhoto = () => {
+    const handlerPrevPhoto = (e) => {
+        e.stopPropagation();
         if (indexActivePhoto !== 0) {
             setIndexActivePhoto(indexActivePhoto - 1);
         }
     };
 
-    const handlerNextPhoto = () => {
+    const handlerNextPhoto = (e) => {
+        e.stopPropagation();
         if (indexActivePhoto !== photos.length - 1) {
             setIndexActivePhoto(indexActivePhoto + 1);
         }
     };
-
-    // TODO: Сделать слайдер внутри модалки?
 
     return (
         <div className='slider__container'>
@@ -36,18 +32,22 @@ const Slider = ({ photos }) => {
                         <img className='slider__img' src={projectsImg[prevPhoto]} alt='стрижка модельная' />
                     </li>
                 ) : (
-                    <li className='slider__item'></li>
+                    <li className='slider__item visibility'></li>
                 )}
                 <li className='slider__item slider__item_active'>
-                    <img className='slider__img' src={projectsImg[activePhoto]} alt='стрижка модельная' />
-                    <div className='main__photo_zoom'>
-                        <Zoom onClick={() => setModal(true)} />
-                    </div>
+                    <img
+                        className='slider__img'
+                        src={projectsImg[activePhoto]}
+                        alt='стрижка модельная'
+                        onClick={() => setModal(true)}
+                    />
                 </li>
-                {!!nextPhoto && (
+                {!!nextPhoto ? (
                     <li className='slider__item right_slide'>
                         <img className='slider__img' src={projectsImg[nextPhoto]} alt='стрижка модельная' />
                     </li>
+                ) : (
+                    <li className='slider__item visibility'></li>
                 )}
             </ul>
             {indexActivePhoto !== 0 ? (
@@ -68,7 +68,15 @@ const Slider = ({ photos }) => {
             ) : (
                 ''
             )}
-            <Modal isVisible={isModal} setModal={setModal} content={projectsImg[activePhoto]} />
+            <Modal
+                isVisible={isModal}
+                setModal={setModal}
+                content={projectsImg[activePhoto]}
+                handlerPrevPhoto={handlerPrevPhoto}
+                handlerNextPhoto={handlerNextPhoto}
+                prevPhoto={prevPhoto}
+                nextPhoto={nextPhoto}
+            />
         </div>
     );
 };

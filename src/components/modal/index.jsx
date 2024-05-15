@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './style.css';
 
-const Modal = ({ isVisible = false, content, setModal }) => {
+const Modal = ({ isVisible = false, content, setModal, handlerPrevPhoto, handlerNextPhoto, prevPhoto, nextPhoto }) => {
     const onClose = () => {
         setModal(false);
     };
@@ -26,12 +26,12 @@ const Modal = ({ isVisible = false, content, setModal }) => {
 
     return !isVisible ? null : (
         <div className='modal' onClick={onClose}>
-            <div className='modal__dialog' onClick={(e) => e.stopPropagation()}>
-                <span className='modal__close' onClick={onClose}>
-                    &times;
-                </span>
-                <img src={content} alt='картинка' className='modal__content' />
+            {!!prevPhoto && <span className='modal__arrow modal__arrow-left' onClick={handlerPrevPhoto}></span>}
+            <div className='modal__dialog'>
+                {/* gghhh */}
+                <img src={content} alt='картинка' className='modal__content' onClick={onClose} />
             </div>
+            {!!nextPhoto && <span className='modal__arrow modal__arrow-right' onClick={handlerNextPhoto}></span>}
         </div>
     );
 };

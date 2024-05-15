@@ -37,6 +37,10 @@
     width: 100%;
 }
 
+.slider__item_active:hover {
+    cursor: zoom-in;
+}
+
 .slider__arrow {
     position: absolute;
     bottom: 1%;

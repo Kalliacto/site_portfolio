@@ -27,8 +27,6 @@
     animation-name: slide-in;
     animation-duration: 0.5s;
     border-radius: 24px;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .modal__close {
@@ -46,6 +44,55 @@
     width: auto;
     height: max-content;
     max-height: 95vh;
+}
+
+.modal__content:hover {
+    cursor: zoom-out;
+}
+
+.modal__arrow {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 99999;
+}
+.modal__arrow:hover {
+    opacity: 0.7;
+}
+
+.modal__arrow-left {
+    left: 1%;
+}
+
+.modal__arrow-right {
+    right: 1%;
+}
+
+.modal__arrow-left::before {
+    content: '';
+    display: block;
+    height: 34px;
+    width: 34px;
+    background-image: url('../../assets/images/icons/arrow.svg');
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.modal__arrow-right::after {
+    content: '';
+    display: block;
+    height: 34px;
+    width: 34px;
+    background-image: url('../../assets/images/icons/arrow.svg');
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%) scale(-1);
+    position: absolute;
 }
 
 @keyframes appear {
