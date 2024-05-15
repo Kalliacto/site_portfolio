@@ -1,17 +1,17 @@
-.nav-list__link {
+.nav__list_link {
     color: var(--nav-text);
     transition: opacity 0.2s ease-in;
 }
 
-.nav-list__link:hover {
+.nav__list_link:hover {
     opacity: 0.8;
 }
 
-.nav-list__link--active {
+.nav__list_link-active {
     position: relative;
 }
 
-.nav-list__link--active::before {
+.nav__list_link-active::before {
     content: '';
     position: absolute;
     left: 0;
@@ -47,7 +47,7 @@
     transition: left 0.2s ease-in;
 }
 
-.dark-mode-btn--active::before {
+.dark-mode-btn-active::before {
     left: 26px;
 }
 

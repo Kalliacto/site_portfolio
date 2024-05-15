@@ -8,26 +8,21 @@
     --black-border: #26292d;
     --white: #fff;
     --purple: #5c62ec;
-
     /* Nav */
     --nav-bg: var(--black);
     --nav-border: var(--black-border);
     --nav-text: var(--white);
-
-    /* Header */
-    --header-bg: var(--black);
-    --header-text: var(--white);
-
+    /* Hero */
+    --hero-bg: var(--black);
+    --hero-text: var(--white);
     /* Footer */
     --footer-bg: var(--black);
     --footer-text: var(--white);
-
     /* Light mode */
     --page-bg: var(--white);
     --text-color: var(--black);
     --accent: var(--purple);
     --title-1: var(--accent);
-
     --project-card-bg: var(--white);
     --project-card-text: var(--black);
     --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
@@ -40,7 +35,7 @@
     --title-1: var(--white);
     --project-card-bg: var(--black);
     --project-card-text: var(--white);
-    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
 }
 
 html,
@@ -58,8 +53,9 @@ body {
 /* General */
 
 .container {
+    /* max-width: calc(1180px + 30px * 2); */
+    padding: 0 30px;
     margin: 0 auto;
-    padding: 0 15px;
     max-width: 1200px;
 }
 
@@ -133,4 +129,8 @@ body {
 .btn-outline:active {
     position: relative;
     top: 1px;
+}
+
+.visibility {
+    visibility: hidden;
 }

@@ -1,20 +1,21 @@
 import React from 'react';
 import './style.css';
+import resume from '../../assets/images/resume.pdf';
 
-const Header = (props) => {
+const Hero = (props) => {
     return (
-        <header className='header'>
-            <div className='header__wrapper'>
-                <h1 className='header__title'>
+        <header className='hero'>
+            <div className='hero__wrapper'>
+                <h1 className='hero__title'>
                     <strong>
                         Hi, my name is <em>Karina</em>
                     </strong>
                     <br />a frontend developer
                 </h1>
-                <div className='header__text'>
+                <div className='hero__text'>
                     <p>with passion for learning and creating.</p>
                 </div>
-                <a href='#!' className='btn'>
+                <a href={resume} download={'resume.pdf'} className='btn' target='_blank' rel='noreferrer'>
                     Download CV
                 </a>
             </div>
@@ -22,4 +23,4 @@ const Header = (props) => {
     );
 };
 
-export default Header;
+export default Hero;
