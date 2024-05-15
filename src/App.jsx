@@ -1,8 +1,8 @@
 import Footer from './components/footer';
 import Navbar from './components/navbar';
-import Contacts from './pages/contacts/inadex';
-import HomePage from './pages/homePage/inadex';
-import Projects from './pages/projects/inadex';
+import Contacts from './pages/contacts/index';
+import HomePage from './pages/homePage/index';
+import Projects from './pages/projects/index';
 import './styles/main.css';
 import './App.css';
 import { Route, Routes } from 'react-router';
