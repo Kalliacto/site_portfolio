@@ -59,5 +59,30 @@
         "mainImg": "project6",
         "gitHabLink": "https://github.com/Kalliacto/WeatherForecast",
         "skills": "React, HTML, CSS (flex, grid), React Router, API погоды weatherapi"
+    },
+    {
+        "id": "project7",
+        "title": "DogFood",
+        "miniImg": "project_mini7",
+        "mainImg": "project7",
+        "photos": ["project7", "project7_1", "project7_2", "project7_3", "project7_4", "project7_5"],
+        "gitHabLink": "https://github.com/Kalliacto/Travel-Landing-Page",
+        "skills": "React, React, ReactDOM, Reduxjs/toolkit, HTML, CSS"
+    },
+    {
+        "id": "project8",
+        "title": "Travel Landing Page",
+        "miniImg": "project_mini8",
+        "mainImg": "project8",
+        "gitHabLink": "https://github.com/Kalliacto/Travel-Landing-Page",
+        "skills": "HTML, CSS"
+    },
+    {
+        "id": "project9",
+        "title": "Chrismas Trees",
+        "miniImg": "project_mini9",
+        "mainImg": "project9",
+        "gitHabLink": "https://github.com/Kalliacto/Chrismas-Trees",
+        "skills": "HTML, CSS"
     }
 ]

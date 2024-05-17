@@ -9,10 +9,16 @@ const Modal = ({ isVisible = false, content, setModal, handlerPrevPhoto, handler
         setActive(false);
     };
 
-    const keydownHandler = ({ key }) => {
-        switch (key) {
+    const keydownHandler = (e) => {
+        switch (e.key) {
             case 'Escape':
                 onClose();
+                break;
+            case 'ArrowRight':
+                handlerNextPhoto(e);
+                break;
+            case 'ArrowLeft':
+                handlerPrevPhoto(e);
                 break;
             default:
         }
@@ -46,9 +52,11 @@ const Modal = ({ isVisible = false, content, setModal, handlerPrevPhoto, handler
                     onDoubleClick={(e) => toggleZoom(e)}
                 />
             </div>
-            {!!nextPhoto && <span className='modal__arrow modal__arrow-right' onClick={handlerNextPhoto}></span>}
+            {!!nextPhoto && <span className='modal__arrow modal__arrow-right' onClick={handlerNextPhoto} onT></span>}
         </div>
     );
 };
 
 export default Modal;
+
+// TODO: Сделать передистывание по свайпу для мобил
