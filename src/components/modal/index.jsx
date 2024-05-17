@@ -9,10 +9,16 @@ const Modal = ({ isVisible = false, content, setModal, handlerPrevPhoto, handler
         setActive(false);
     };
 
-    const keydownHandler = ({ key }) => {
-        switch (key) {
+    const keydownHandler = (e) => {
+        switch (e.key) {
             case 'Escape':
                 onClose();
+                break;
+            case 'ArrowRight':
+                handlerNextPhoto(e);
+                break;
+            case 'ArrowLeft':
+                handlerPrevPhoto(e);
                 break;
             default:
         }
@@ -52,3 +58,5 @@ const Modal = ({ isVisible = false, content, setModal, handlerPrevPhoto, handler
 };
 
 export default Modal;
+
+// TODO: Сделать передистывание по свайпу для мобил
