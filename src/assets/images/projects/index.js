@@ -29,6 +29,17 @@ import project3_4 from './photo3_4.jpg';
 import project3_5 from './photo3_5.jpg';
 import project3_6 from './photo3_6.jpg';
 import project3_7 from './photo3_7.jpg';
+import project8 from './photo8.jpg';
+import project9 from './photo9.jpg';
+import project_mini8 from './mini8.jpg';
+import project_mini9 from './mini9.jpg';
+import project7 from './photo7.jpg';
+import project7_1 from './photo7_1.jpg';
+import project7_2 from './photo7_2.jpg';
+import project7_3 from './photo7_3.jpg';
+import project7_4 from './photo7_4.jpg';
+import project7_5 from './photo7_5.jpg';
+import project_mini7 from './project_mini7.png';
 
 const projectsMiniImg = {
     project1,
@@ -62,6 +73,17 @@ const projectsMiniImg = {
     project3_5,
     project3_6,
     project3_7,
+    project8,
+    project9,
+    project_mini8,
+    project_mini9,
+    project7,
+    project7_1,
+    project7_2,
+    project7_3,
+    project7_4,
+    project7_5,
+    project_mini7,
 };
 
 export default projectsMiniImg;

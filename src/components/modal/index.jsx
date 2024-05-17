@@ -52,7 +52,7 @@ const Modal = ({ isVisible = false, content, setModal, handlerPrevPhoto, handler
                     onDoubleClick={(e) => toggleZoom(e)}
                 />
             </div>
-            {!!nextPhoto && <span className='modal__arrow modal__arrow-right' onClick={handlerNextPhoto}></span>}
+            {!!nextPhoto && <span className='modal__arrow modal__arrow-right' onClick={handlerNextPhoto} onT></span>}
         </div>
     );
 };
