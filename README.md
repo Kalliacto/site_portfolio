@@ -1,1 +1,1 @@
-### Проект находится в работе, [добро пожаловать на бета-тест...](https://6646fe021ee1d078b200da78--glittery-vacherin-e1878f.netlify.app)
+### Проект находится в работе, [добро пожаловать на бета-тест...](https://66716ef0ab329707bf82df8e--stupendous-malasada-7f3af1.netlify.app)
