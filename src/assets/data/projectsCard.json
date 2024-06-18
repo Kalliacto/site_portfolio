@@ -1,5 +1,14 @@
 [
     {
+        "id": "project01",
+        "title": "Landing page FreshBar",
+        "miniImg": "project_mini01",
+        "mainImg": "project01",
+        "gitHabLink": "https://github.com/Kalliacto/FreshBar-Vue-",
+        "skills": "Vue 3, Pinia, HTML, CSS (flex, grid)",
+        "implemented": "адаптивная верстка с возможностью просмотра списка карточек товаров, корзиной для покупок и формой отправки заказа"
+    },
+    {
         "id": "project1",
         "title": "Video service of popular videos You Tube",
         "miniImg": "project_mini1",

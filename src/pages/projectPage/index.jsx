@@ -28,10 +28,14 @@ const ProjectPage = ({}) => {
                             className='project-details__cover'
                         />
                     )}
-
                     <div className='project-details__desc'>
                         <p>Skills: {project.skills}</p>
                     </div>
+                    {!!project.implemented && (
+                        <div className='project-details__desc'>
+                            <p>Реализовано: {project.implemented}</p>
+                        </div>
+                    )}
                     <a href={project.gitHabLink} className='btn-outline' target='_blank' rel='noreferrer'>
                         <img src={gitHub} alt='gitHubImg' />
                         GitHub repo

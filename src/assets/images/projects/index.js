@@ -1,3 +1,5 @@
+import project01 from './photo01.jpg';
+import project_mini01 from './photo01_mini.jpg';
 import project1 from './photo1.jpg';
 import project1_1 from './photo1_1.jpg';
 import project1_2 from './photo1_2.jpg';
@@ -42,6 +44,8 @@ import project7_5 from './photo7_5.jpg';
 import project_mini7 from './project_mini7.png';
 
 const projectsMiniImg = {
+    project01,
+    project_mini01,
     project1,
     project1_1,
     project1_2,
